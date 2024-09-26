@@ -4,8 +4,6 @@ FROM openjdk:17-jdk-slim AS build
 COPY pom.xml mvnw ./
 COPY .mvn .mvn
 
-RUN ls -la
-
 RUN chmod +x ./mvnw
 RUN sh ./mvnw dependency:resolve
 

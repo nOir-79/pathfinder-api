@@ -3,6 +3,8 @@ version: '3.8'
 services:
   app:
     build: ./
+    env_file:
+      - .env.test
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/pathfinder
       SPRING_DATASOURCE_USERNAME: postgres
